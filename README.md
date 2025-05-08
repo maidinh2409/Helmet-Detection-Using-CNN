@@ -1,12 +1,14 @@
 # Helmet-Wearing-Object-Classification-Using-Deep-Learning
 
-## PROJECT OVERVIEW
-
-Lý do chọn dataset: Xuất phát từ my originality, which is a proud Vietnamese, tôi được motivated bởi văn hóa xe máy ở đất nước của tôi. <generate thêm>
-Project là một phần của course tôi học tại Douglas College và được xem như là nền tảng cho các project computer vision chung chủ đề sau này. 
 *[Try the model on Hugging Face Spaces](https://huggingface.co/spaces/demile2409/CSIS-3290-Helmet-Image-Classification)*
 
-**<ins>Description:</ins>** Inspired by real-world safety concerns, this project tackles the challenge of detecting helmet use in images using deep learning. I built and trained a CNN on a custom dataset, enabling the model to distinguish between helmet and non-helmet cases with high accuracy. The final product is deployed as an interactive web app for real-time testing.
+## PROJECT OVERVIEW
+
+**<ins>Description:</ins>** This project was inspired by my Vietnamese heritage, where motorcycles are deeply embedded in everyday life. Growing up in Vietnam, I witnessed both the ubiquity of motorbikes and the critical importance of helmet usage—yet also the risks when safety compliance is overlooked. That cultural context sparked my interest in creating a model that could automatically detect whether someone is wearing a helmet in an image.
+
+This project was developed as part of a course at Douglas College and laid the groundwork for future computer vision projects with real-world relevance and social impact.
+
+I built and trained a Convolutional Neural Network (CNN) on a custom dataset, enabling the model to distinguish between helmet and non-helmet cases with high accuracy. The final product is deployed as an interactive web app for real-time testing.
 
 **<ins>Purpose:</ins>** To apply deep learning to a practical safety compliance problem and build a deployable solution for environments like construction sites and traffic monitoring.
 
@@ -40,5 +42,9 @@ A fully connected MLP on 256×256×3 images would need millions of parameters, m
 While CNN models achieve significantly better performance, out of 71 images labeled as No Helmet, 14 were incorrectly predicted as Helmet, representing approximately 19.7% of No Helmet cases. This is considered the worst-case error for this task, as failing to detect individuals without helmets could compromise safety. It is important to acknowledge issues of detecting No Helmet as Helmet label, which might be because of:
 
 Feature Similarity between Helmet and No Helmet: Upon testing, it was observed that the model correctly classifies individuals wearing distinct objects like caps or those with bright-colored long hair (e.g., blonde) as No Helmet. However, it struggles with individuals having dark short hair or bun hairstyles, often misclassifying them as wearing helmets. This suggests that the model excels when the object structure visibly differs from a helmet but struggles when the structure is visually similar.
+
 Data quality: The dataset was cropped from an object detection dataset. As a result, many cropped images suffer from issues such as blurriness, poor lighting, or a lack of clear structural distinction between helmet and no helmet instances. This likely contributes to the model’s difficulty in differentiating subtle visual cues.
-Due to the prediction challenges discussed above, I have also provided a separate folder containing external test images alongside this submission. If you wish to test using your own images, please screenshot and crop the object to include only the head region, as the entire dataset used for training was based on cropped head images.
+
+*Due to the prediction challenges discussed above, I have also provided a separate folder containing external test images alongside this submission. If you wish to test using your own images, please screenshot and crop the object to include only the head region, as the entire dataset used for training was based on cropped head images.*
+
+*[Try the model on Hugging Face Spaces](https://huggingface.co/spaces/demile2409/CSIS-3290-Helmet-Image-Classification)*
