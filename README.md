@@ -37,7 +37,7 @@ A fully connected MLP on 256×256×3 images would need millions of parameters, m
 
 ![image](https://github.com/user-attachments/assets/d656e57f-a3a6-4931-bfa7-0bbfb118c513)
 
-**Important Challenges Identified **
+**Important Challenges Identified**
 
 While CNN models achieve significantly better performance, out of 71 images labeled as No Helmet, 14 were incorrectly predicted as Helmet, representing approximately 19.7% of No Helmet cases. This is considered the worst-case error for this task, as failing to detect individuals without helmets could compromise safety. It is important to acknowledge issues of detecting No Helmet as Helmet label, which might be because of:
 
